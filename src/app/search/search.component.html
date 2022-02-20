@@ -1,0 +1,12 @@
+<div class="mainClass">
+    <div class="innerClass">
+        <img src="https://scal.io/assets/images/logos/logo-black-f2e4edd3ef.svg" class="imgLogo">
+        <input  class="txtInput" type="text" id="search" placeholder="Login" #titleInput> 
+        <button class="btnsbmit button2" type="button" name="sbmit" (click)="submitQuery(titleInput.value)">Submit</button>
+    </div>
+
+    <app-results [data] = "details"></app-results>
+    <div class='empty-result' *ngIf="empty">
+        No result Found!!
+        </div>
+</div>
