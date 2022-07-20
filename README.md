@@ -8,6 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 2- Added Logout feature.
 3- UI changes
 4- Angular guard implementation.
+5- Toastr implementation for notification.
 
 ## Development server
 
