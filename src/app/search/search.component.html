@@ -1,12 +1,49 @@
-<div class="mainClass">
-    <div class="innerClass">
-        <img src="https://scal.io/assets/images/logos/logo-black-f2e4edd3ef.svg" class="imgLogo">
-        <input  class="txtInput" type="text" id="search" placeholder="Login" #titleInput> 
+ <nav class="navbar navbar-expand-sm bg-light">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <div class="float-right">
+            <span class="glyphicon glyphicon-log-out" (click)="logout()"></span> 
+        </div>
+        </li>
+    </ul>
+</nav>  
+
+ <div class="mainClass">
+    <div class="table innerClass">
+        <img src="/assets/images/logo-blackScalio.svg" class="imgLogo">
+        <input  class="txtInput" type="text" id="search" placeholder="Login"   #titleInput> 
         <button class="btnsbmit button2" type="button" name="sbmit" (click)="submitQuery(titleInput.value)">Submit</button>
     </div>
 
-    <app-results [data] = "details"></app-results>
+      
+
+
+<!-- 
+<div style="margin-top: -68px;" class="py-4">
+    <div class="row">
+        <div class="col-md-5 mx-auto">
+           
+            <div class="input-group">
+                <input style="height: 30px;" class="form-control border-end-0 border" placeholder="Search..." id="example-search-input" #titleInput>
+                <span class="input-group-append">
+                    <button class="btn btn-outline-secondary bg-black border-bottom-0 border ms-n5" type="button" (click)="submitQuery(titleInput.value)">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+</div> -->
+ 
+ <!-- <div  class="container">
+    <input type="text" placeholder="Search..."  #titleInput (keyup.enter)="submitQuery(titleInput.value)">
+    <div class="search" ></div>
+</div> -->
+  
+
+
+
+<app-results [data] = "details"></app-results>
     <div class='empty-result' *ngIf="empty">
         No result Found!!
-        </div>
 </div>

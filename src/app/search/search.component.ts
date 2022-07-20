@@ -1,13 +1,14 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild,AfterViewInit ,Renderer2 } from '@angular/core';
 import { DemoService } from '../demo.service';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent implements OnInit ,AfterViewInit {
   @ViewChild("titleInput") public titleInput: any; // accessing the reference element
   siblings: {}[] = [];
 
@@ -17,9 +18,11 @@ export class SearchComponent implements OnInit {
   empty: boolean=false;
   constructor(
     private demoService:DemoService,
-    private toastr: ToastrService ) { }
+    private toastr: ToastrService ,
+    private router: Router) { }
 
   ngOnInit(): void {
+    //this.titleInput.nativeElement.value= 'test';
   }
 
   submitQuery(input:any){
@@ -55,4 +58,18 @@ export class SearchComponent implements OnInit {
      
     }
   }
+  ngAfterViewInit() {
+   // this.renderer.setProperty(this.titleInput.nativeElement, 'innerHTML', '<h1>Hello world</h1>');
+   //this.titleInput.nativeElement.value= 'test';
+  }
+ logout(){
+  localStorage.removeItem('token')
+  this.router.navigate(["/"]);
+  this.toastr.error("You are logged out!!",'',{
+    timeOut:4000,
+    progressBar:true,
+    positionClass :'toast-top-right'
+    
+  });
+ }
 }

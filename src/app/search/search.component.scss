@@ -1,16 +1,16 @@
-.innerClass{
-    width: 526px;
-    padding: 50px 40px;
-    background: white;
-    border: 1px solid #e5e5e5;
-    box-shadow: 15px 15px 50px #0000000d;
-    margin: 0 auto;
-    text-align: center;
-}
 .mainClass{
-    margin: 10%;
-    width: 75%;
+  margin: 6% 10%;
+  width: 75%;
 }
+.innerClass{
+  width: 526px;
+  padding: 50px 40px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 20px -19px 50px #594e4e36;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .txtInput{
     font-size: 16px;
     line-height: 15px;
@@ -25,7 +25,7 @@
     border: 1px solid #e5e5e5;
 }
 .btnsbmit{
-    background-color: #4CAF50; /* Green */
+    background-color: #b15465;; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -56,3 +56,10 @@
     font-size: 25px;
     color: darkred;
   }
+
+.float-right{
+    float: right !important;
+    width: 3rem;
+    font-size: 21px;
+    cursor: pointer;
+}

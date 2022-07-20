@@ -2,6 +2,7 @@
     width: 55px; 
     height: 55px; 
     border-radius: 30px;
+    border: 2px solid #b15465;
 }
 thead th {
     cursor: pointer;
@@ -19,4 +20,12 @@ thead th {
         visibility: visible;
       }
     }
+  }
+  .table{
+    margin-top: 20px !important; 
+    margin-left: 5% !important;
+    font-size: 13px !important;
+  }
+  .ml-5{
+    margin-left: 5rem !important;
   }

@@ -1,0 +1,100 @@
+  <div class="float-container">
+	<div class="h-100">
+	 
+        <div style="margin-top: 13px !important;"  class="float-child green col-lg-12">
+            <img  src="/assets/images/logo-blackScalio.svg">
+        </div>
+	 
+		<p>
+			<ngb-alert [dismissible]="false">
+			  <strong>Warning!</strong> Better check yourself, you're not looking too good.
+			</ngb-alert>
+		  </p>
+		<div class="card float-child blue">
+			<div class="card-header">
+				<h3>Sign In</h3>
+			</div>
+			<div class="card-body">
+				<form [formGroup]="form">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+						</div>
+						<input type="text" class="form-control" placeholder="user Name"  formControlName="email">
+						
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input type="password" class="form-control" placeholder="password"    formControlName="password">
+					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox">Remember Me
+					</div>
+					<div class="form-group">
+                        <button class="btn float-right login_btn" (click)="onSubmit()">Login</button> 
+					</div>
+				</form>
+			</div>
+			
+			<div class="card-login">
+				<div class="justify-content-center links">
+					<div class="creds">
+						<span>
+							 user Name : <b>scalio</b>
+						</span>
+						<span>
+							password : <b>ds</b>
+					   </span>
+					</div>
+				</div>
+			</div>
+
+			
+
+			<div class="card-footer">
+				<div class="justify-content-center links">
+					Demo Test for <img  class="footer-img" src="/assets/images/logo-blackScalio.svg">
+				</div>
+			</div>
+		  </div>
+	    
+	</div>
+</div>  
+
+<!-- Modal -->
+<!-- <ng-template #content let-modal>
+	<div class="modal-header">
+	  <h4 class="modal-title">Modal title</h4>
+	  <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+	  <p>One fine body&hellip;</p>
+	</div>
+	<div class="modal-footer">
+	  <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+	</div>
+  </ng-template> -->
+
+
+  <ng-template #content let-modal>
+	<div class="modal-header">
+	  <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+	  <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+	  <form>
+		<div class="mb-3">
+		  <label>Date of birth</label>
+		  <div class="input-group">
+			demo pop Up
+			
+		  </div>
+		</div>
+	  </form>
+	</div>
+	<div class="modal-footer">
+	  <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+	</div>
+  </ng-template>

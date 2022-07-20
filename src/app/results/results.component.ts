@@ -23,11 +23,8 @@ export class ResultsComponent implements OnInit {
   ngOnInit(): void {
   }
   ngOnChanges(changes : SimpleChanges){
-    console.log(changes)
     this.getData= changes.data.currentValue;
-    if(!changes.data.firstChange && changes.data.currentValue.length >0){
-      this.showTable= true
-    }
+    this.showTable  = !changes.data.firstChange && changes.data.currentValue.length > 0 ? true : false
   }
   setOrder(value: string) {
     if (this.order === value) {
